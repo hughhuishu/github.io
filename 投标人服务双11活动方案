@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>双十一投标人服务产品促销活动方案</title>
+<style>
+:root{
+  --red:#E1251B; --red2:#FF5A45; --redsoft:#FFF1EF;
+  --orange:#FF8A00; --gold:#F5B301; --goldsoft:#FFF8E6;
+  --ink:#16181D; --ink2:#4A5058; --ink3:#8A9099;
+  --bg:#F4F5F7; --card:#FFFFFF; --line:#E8EAEE; --linesoft:#F1F2F5;
+  --green:#0FA968; --bluesoft:#EEF4FF; --blue:#2B6CDB;
+  --warnsoft:#FFF7E6; --warnline:#FFE2A8;
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;font-size:15px;}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px 100px;}
+
+.nav{position:sticky;top:0;z-index:99;background:rgba(255,255,255,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
+.nav-in{max-width:1160px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:4px;height:54px;overflow-x:auto;}
+.nav-in::-webkit-scrollbar{display:none;}
+.nav a{font-size:12.5px;color:var(--ink2);text-decoration:none;padding:6px 10px;border-radius:20px;white-space:nowrap;transition:.18s;}
+.nav a:hover{background:var(--redsoft);color:var(--red);}
+.nav-brand{font-weight:800;font-size:14px;color:var(--red);margin-right:8px;white-space:nowrap;}
+
+.hero{background:linear-gradient(135deg,#C4140C 0%,#E1251B 42%,#FF6A3D 100%);color:#fff;padding:50px 0 58px;position:relative;overflow:hidden;}
+.hero::after{content:"";position:absolute;right:-140px;top:-140px;width:460px;height:460px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 68%);}
+.hero::before{content:"";position:absolute;left:-90px;bottom:-160px;width:380px;height:380px;background:radial-gradient(circle,rgba(255,255,255,.10),transparent 70%);}
+.hero-in{max-width:1160px;margin:0 auto;padding:0 20px;position:relative;z-index:2;}
+.hero-tag{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);padding:5px 14px;border-radius:20px;font-size:12.5px;margin-bottom:16px;}
+.hero-tag i{width:6px;height:6px;border-radius:50%;background:#FFD84D;display:block;}
+.hero h1{font-size:40px;line-height:1.22;font-weight:800;letter-spacing:-.5px;}
+.hero h1 em{font-style:normal;color:#FFE05C;}
+.hero .sub{font-size:16px;opacity:.94;margin-top:12px;max-width:800px;}
+.hero .sub b{font-weight:700;border-bottom:2px solid rgba(255,255,255,.5);padding-bottom:1px;}
+.hero-meta{display:flex;flex-wrap:wrap;gap:22px;margin-top:22px;font-size:13px;opacity:.92;}
+.hk{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.24);border-radius:var(--radius);padding:15px 17px;}
+.hk small{display:block;font-size:12px;opacity:.85;margin-bottom:3px;}
+.hk strong{font-size:26px;font-weight:800;letter-spacing:-.5px;line-height:1.2;}
+.hk strong i{font-style:normal;font-size:14px;font-weight:600;margin-left:2px;}
+.hk p{font-size:11.5px;opacity:.78;margin-top:3px;}
+
+section{margin-top:44px;}
+.s-head{display:flex;align-items:flex-start;gap:13px;margin-bottom:18px;}
+.s-no{flex:none;width:32px;height:32px;border-radius:9px;background:var(--red);color:#fff;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(225,37,27,.28);}
+.s-no.warn{background:var(--orange);box-shadow:0 4px 12px rgba(255,138,0,.28);}
+.s-head h2{font-size:21px;font-weight:800;letter-spacing:-.3px;line-height:1.35;}
+.s-head p{font-size:13px;color:var(--ink3);margin-top:3px;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;}
+.card+.card{margin-top:14px;}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+h3.ct{font-size:15px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+h3.ct::before{content:"";width:3px;height:15px;border-radius:2px;background:var(--red);display:block;}
+h3.ct.gray::before{background:var(--ink3);}
+
+table{width:100%;border-collapse:collapse;font-size:13px;}
+th{background:#FAFBFC;font-weight:700;color:var(--ink2);text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);font-size:12px;white-space:nowrap;}
+td{padding:9px 11px;border-bottom:1px solid var(--linesoft);vertical-align:top;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:hover{background:#FCFCFD;}
+tr.total-row td{background:var(--redsoft);font-weight:800;color:var(--red);border-bottom:none;}
+tr.sub-row td{background:#FAFBFC;font-weight:700;color:var(--ink2);}
+.num{font-variant-numeric:tabular-nums;font-weight:600;}
+.tag{display:inline-block;font-size:11px;padding:1.5px 7px;border-radius:5px;font-weight:700;vertical-align:middle;white-space:nowrap;}
+.t-red{background:var(--redsoft);color:var(--red);}
+.t-gold{background:var(--goldsoft);color:#9A6B00;}
+.t-blue{background:var(--bluesoft);color:var(--blue);}
+.t-gray{background:#F2F3F5;color:var(--ink3);}
+.t-green{background:#E9F8F1;color:var(--green);}
+.t-warn{background:var(--warnsoft);color:#9A6B00;}
+.muted{color:var(--ink3);font-size:12.5px;}
+
+.funnel{display:flex;flex-direction:column;gap:8px;align-items:center;}
+.fn{width:100%;border-radius:10px;padding:12px 18px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+.fn span{font-size:13px;font-weight:600;opacity:.95;}
+.fn b{font-size:19px;font-weight:800;font-variant-numeric:tabular-nums;}
+.f1{background:linear-gradient(90deg,#C4140C,#E1251B);}
+.f2{background:linear-gradient(90deg,#E1251B,#F04A2E);}
+.f3{background:linear-gradient(90deg,#F0562E,#FF7A33);}
+.f4{background:linear-gradient(90deg,#FF8A00,#FFA733);}
+.f5{background:linear-gradient(90deg,#F5B301,#FFC945);color:#4A3200;}
+.f5 span{opacity:1;}
+.arrowdown{text-align:center;color:var(--ink3);font-size:11px;line-height:1;}
+
+.bars{display:flex;flex-direction:column;gap:10px;}
+.bar-row{display:grid;grid-template-columns:180px 1fr 90px;gap:12px;align-items:center;font-size:13px;}
+.bar-row .lb{color:var(--ink2);font-weight:600;}
+.bar-track{height:20px;background:#F1F2F5;border-radius:6px;overflow:hidden;}
+.bar-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,#E1251B,#FF7A33);}
+.bar-row .vl{text-align:right;font-weight:700;font-variant-numeric:tabular-nums;font-size:13px;}
+
+.tl-line{height:8px;border-radius:4px;background:linear-gradient(90deg,#E8EAEE,#FFC945 20%,#E1251B 41%,#E1251B 80%,#FF8A00);}
+.tl-days{display:flex;font-size:11px;color:var(--ink3);margin-top:5px;}
+.tl-days div{flex:1;text-align:center;}
+.tl-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px;}
+.tl-c{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 13px;position:relative;}
+.tl-c.hot{border:2px solid var(--red);box-shadow:0 6px 20px rgba(225,37,27,.14);}
+.tl-c.hot::before{content:"活动期";position:absolute;top:-9px;left:13px;background:var(--red);color:#fff;font-size:10.5px;font-weight:700;padding:1.5px 9px;border-radius:9px;}
+.tl-c h4{font-size:13px;font-weight:800;margin-bottom:4px;}
+.tl-c .dt{font-size:11px;color:var(--red);font-weight:700;margin-bottom:8px;font-variant-numeric:tabular-nums;}
+.tl-c ul{list-style:none;font-size:12px;color:var(--ink2);line-height:1.72;}
+.tl-c ul li::before{content:"·";color:var(--red);font-weight:900;margin-right:5px;}
+td
+td
+td
+td
+td
+td
+td
+
+.persona{border:1px solid var(--line);border-radius:12px;padding:15px 16px;background:#fff;display:flex;flex-direction:column;}
+.persona .ph{display:flex;align-items:center;gap:9px;margin-bottom:9px;}
+.persona .pico{width:32px;height:32px;border-radius:10px;background:var(--redsoft);color:var(--red);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;flex:none;}
+.persona h4{font-size:14px;font-weight:800;}
+.persona .pn{font-size:11.5px;color:var(--ink3);}
+.persona .pl{font-size:11.5px;font-weight:700;color:var(--ink3);margin:8px 0 3px;}
+.persona p{font-size:12.5px;color:var(--ink2);line-height:1.7;}
+.persona .ppill{display:inline-block;font-size:11.5px;background:#F5F6F8;color:var(--ink2);padding:2px 9px;border-radius:6px;margin:3px 4px 0 0;}
+.persona .pm{margin-top:auto;padding-top:10px;border-top:1px dashed var(--line);font-size:12px;color:var(--ink2);}
+
+.pil{background:#fff;border:1px solid var(--line);border-left:3px solid var(--red);border-radius:10px;padding:13px 14px;}
+.pil h4{font-size:13px;font-weight:800;margin-bottom:5px;}
+.pil p{font-size:12.5px;color:var(--ink2);line-height:1.7;}
+.pil .kw{font-size:11.5px;color:var(--red);font-weight:700;margin-top:7px;display:block;}
+
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+.kpi{border:1px solid var(--line);border-radius:12px;padding:14px 15px;background:#fff;}
+.kpi small{font-size:12px;color:var(--ink3);display:block;}
+.kpi strong{font-size:22px;font-weight:800;color:var(--red);display:block;margin:4px 0 2px;letter-spacing:-.5px;}
+.kpi span{font-size:11.5px;color:var(--ink3);}
+
+.banlist{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;}
+.banlist span{background:#fff;border:1px solid #FFD3CC;color:#C4140C;font-size:12px;padding:2px 9px;border-radius:6px;font-weight:600;}
+
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:13px;}
+.kv dt{color:var(--ink3);font-size:12.5px;padding-top:2px;}
+.kv dd{color:var(--ink);font-weight:600;}
+
+.footer{text-align:center;font-size:12px;color:var(--ink3);margin-top:52px;padding-top:20px;border-top:1px solid var(--line);}
+.src{font-size:11px;background:#F2F3F5;color:var(--ink3);padding:1px 6px;border-radius:4px;font-weight:600;}
+
+@media(max-width:900px){
+  .hero h1{font-size:29px;}
+  .grid4,.grid3,.kpi-grid,.tl-cards{grid-template-columns:1fr 1fr;}
+  .grid2{grid-template-columns:1fr;}
+  .bar-row{grid-template-columns:120px 1fr 74px;}
+}
+@media(max-width:620px){
+  .grid4,.grid3,.kpi-grid,.tl-cards{grid-template-columns:1fr;}
+  .hero h1{font-size:24px;}
+}
+@media print{
+  .nav{display:none;} body{background:#fff;} section{page-break-inside:avoid;}
+  .hero{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-tag"><i></i>新点投标人服务 · 2026 双十一促销活动 · 分公司宣贯版</div>
+    <h1>双十一大促启幕 ｜ <em>年度优惠限时来袭</em></h1>
+    <p class="sub">新享限时好价 ｜ 点破业务关卡<br>覆盖 <b>AI编标 · 标讯2.0 · 智能排版 · 移动CA</b> 全线产品，总部分公司联动、线上线下协同。</p>
+    <div class="hero-meta">
+      <span>前期准备 <b>10.08 – 11.01</b></span>
+      <span>预热 <b>11.02 – 11.10</b></span>
+      <span>活动 <b>11.11 – 11.30</b></span>
+      <span>收尾 <b>12.01 – 12.07</b></span>
+      <span>预算 <b>6.52 万</b></span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<nav class="nav" style="margin:0 -20px;">
+  <div class="nav-in">
+    <span class="nav-brand">双十一</span>
+    <a href="#s1">产品价格</a>
+    <a href="#s2">活动玩法</a>
+    <a href="#s3">直播排期</a>
+    <a href="#s4">时间轴</a>
+    <a href="#s5">渠道矩阵</a>
+    <a href="#s6">预算</a>
+    <a href="#s7">组织分工</a>
+    <a href="#s8">KPI</a>
+    <a href="#s9">活动规则</a>
+  </div>
+</nav>
+
+<!-- 1 -->
+<section id="s1">
+  <div class="s-head">
+    <div class="s-no">1</div>
+    <div>
+      <h2>产品与价格体系</h2>
+      <p>三类货架：全国通用套餐（主力）、顺手买一件（连带）、区域组合套餐（分公司自定）。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 class="ct">全国通用套餐（6 档 · 主力）</h3>
+    <table>
+      <thead>
+        <tr><th style="width:36px;">序号</th><th>内容</th><th>赠送</th><th class="num">产品综合价格</th><th class="num">套餐价格</th><th class="num">赠送比例</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="num">1</td><td>AI编标 500万字（2,999元）+ 标讯2.0 SVIP 1年（399元）</td><td>AI编标 200万字</td><td class="num">3,398</td><td class="num" style="color:var(--red);font-weight:800;">2,599</td><td class="num">31%</td>
+        </tr>
+        <tr><td class="num">2</td><td>AI编标 1000万字（5,998元）+ 标讯2.0 SVIP 1年（399元）</td><td>AI编标 400万字</td><td class="num">6,397</td><td class="num" style="color:var(--red);font-weight:800;">4,699</td><td class="num">36%</td></tr>
+        <tr><td class="num">3</td><td>AI编标 1500万字（8,997元）+ 标讯2.0 SVIP 1年（399元）</td><td>AI编标 600万字</td><td class="num">9,396</td><td class="num" style="color:var(--red);font-weight:800;">6,799</td><td class="num">38%</td></tr>
+        <tr><td class="num">4</td><td>AI编标 1亿字（29,999元）+ 标讯2.0 SVIP 1年（399元）</td><td>VIP客服 1年（998元）</td><td class="num">31,396</td><td class="num" style="color:var(--red);font-weight:800;">24,999</td><td class="num">26%</td></tr>
+        <tr><td class="num">5</td><td>AI编标 1000万字（5,998元）+ 标证通（市场价）</td><td>标讯2.0 SVIP 1年（399元）+ VIP客服 1年（998元）</td><td class="num">7,395 + 标证通价格</td><td class="num">5,399 + 标证通价格</td><td class="num">/</td></tr>
+        <tr><td class="num">6</td><td>AI编标 500万字（2,999元）+ 标证通（市场价）</td><td>标讯2.0 SVIP 1年（399元）</td><td class="num">3,398 + 标证通价格</td><td class="num">2,599 + 标证通价格</td><td class="num">/</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3 class="ct">顺手买一件（连带销售 · 单笔实付满 2,000 元可加购 1 次）</h3>
+    <table>
+      <thead><tr><th>产品</th><th class="num">原价</th><th class="num">消费即享</th><th class="num">消费即享 — 河南地区</th></tr></thead>
+      <tbody>
+        <tr><td>AI编标</td><td class="num">159 元 / 20万字</td><td class="num">129 元 / 20万字</td><td class="num">/</td></tr>
+        <tr><td>AI编标</td><td class="num">349 元 / 50万字</td><td class="num">289 元 / 50万字</td><td class="num">/</td></tr>
+        <tr><td>AI编标</td><td class="num">699 元 / 100万字</td><td class="num">569 元 / 100万字</td><td class="num">/</td></tr>
+        <tr><td>智能排版</td><td class="num">300 元 / 次</td><td class="num">249 元 / 次（除河南地区）</td><td class="num">169 元 / 次（河南地区）</td></tr>
+        <tr><td>清标工具</td><td class="num">200 元 / 次</td><td class="num">169 元 / 次</td><td class="num">/</td></tr>
+        <tr><td>AI编标 20万字（159元）+ 清标工具 1次（200元）</td><td class="num">359 元</td><td class="num">298 元</td><td class="num">/</td></tr>
+        <tr><td>AI编标 50万字（349元）+ 清标工具 2次（400元）</td><td class="num">749 元</td><td class="num">618 元</td><td class="num">/</td></tr>
+        <tr><td>标讯</td><td class="num">399 元 / 年</td><td class="num">249 元 / 年</td><td class="num">249 元 / 年</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="grid2" style="align-items:start;">
+    <div class="card">
+      <h3 class="ct">区域组合套餐</h3>
+      <p style="font-size:13px;color:var(--ink2);">由各省 / 直辖市分公司商务团队，结合本区域客户结构、销售节奏与主打产品（AI编标、智能排版），提交《区域双 11 组合套餐方案》。</p>
+    </div>
+
+    <div class="card">
+      <h3 class="ct">价格体系三层结构</h3>
+      <div class="bars">
+        <div class="bar-row"><div class="lb">全国通用套餐（主力）</div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><div class="vl">2.6k–25.0k</div></div>
+        <div class="bar-row"><div class="lb">企业编标套餐（含标证通）</div><div class="bar-track"><div class="bar-fill" style="width:22%"></div></div><div class="vl">2.6k–5.4k +标证通</div></div>
+        <div class="bar-row"><div class="lb">区域组合套餐</div><div class="bar-track"><div class="bar-fill" style="width:15%"></div></div><div class="vl">分公司自定</div></div>
+        <div class="bar-row"><div class="lb">顺手买一件（连带）</div><div class="bar-track"><div class="bar-fill" style="width:3%"></div></div><div class="vl">129–618</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section id="s2">
+  <div class="s-head">
+    <div class="s-no">2</div>
+    <div>
+      <h2>活动玩法矩阵</h2>
+      <p>五个玩法机制。</p>
+    </div>
+  </div>
+  <div class="card">
+    <table>
+      <thead><tr><th style="width:110px;">活动</th><th>规则</th><th style="width:210px;">奖项</th><th style="width:110px;">主要负责</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><b>注册有礼</b></td>
+          <td>新用户<b>登录标桥工作台完成注册</b>，即可领取 AI编标 5万字权益。持续至 11.30。</td>
+          <td>AI编标 5万字</td>
+          <td>运营中心<br><span class="muted">权益准备</span></td>
+        </tr>
+        <tr>
+          <td><b>转发有礼</b></td>
+          <td>新老用户<b>微信转发双十一活动海报至朋友圈</b>，即可联系销售领取 AI编标 10万字权益。持续至 11.30。</td>
+          <td>AI编标 10万字</td>
+          <td>运营中心<br><span class="muted">权益准备</span></td>
+        </tr>
+        <tr>
+          <td><b>好礼送不停</b></td>
+          <td>活动期间，所有下单用户<b>单笔订单超 2,000 元</b>即可获得 1 次免费抽奖机会。</td>
+          <td>一等奖 1 名、二等奖 2 名、三等奖 5 名、参与奖 100 名；京东消费券或等值投标人服务产品</td>
+          <td>奖品：运营中心</td>
+        </tr>
+        <tr>
+          <td><b>老带新礼遇</b></td>
+          <td>老用户介绍新用户，<b>新用户下单满 500 元</b>，即返老用户 AI编标 20万字。</td>
+          <td>推荐人得 AI编标 20万字</td>
+          <td>复核：运营中心<br>发放：产品部</td>
+        </tr>
+        <tr>
+          <td><b>顺手买一件</b></td>
+          <td>活动期间，<b>单笔订单实付满 2,000 元</b>，每单可加购 1 次顺手买一件商品。</td>
+          <td>AI编标 / 智能排版 / 清标工具 / 标讯 折扣价</td>
+          <td>营销中台上架</td>
+        </tr>
+        <tr>
+          <td><b>直播间专属活动</b></td>
+          <td><b>拍 9.9 元得【双 11 锁单权益包】</b>= 双 11 满 3,000 额外再减 100（仅限 1 次）+ 成交后直播间专属抽奖；双 11 未下单可退。</td>
+          <td>满 3,000 减 100 + 直播间专属抽奖</td>
+          <td>零售销服部<br>市场和直销</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 3 -->
+<section id="s3">
+  <div class="s-head">
+    <div class="s-no">3</div>
+    <div>
+      <h2>直播排期：四类场次，贯穿全程</h2>
+      <p>四类直播场次，贯穿预热与活动全程。</p>
+    </div>
+  </div>
+  <div class="card">
+    <table>
+      <thead><tr><th style="width:170px;">场次</th><th style="width:110px;">直播时间</th><th style="width:140px;">直播类型</th><th>内容安排</th></tr></thead>
+      <tbody>
+        <tr><td><b>双 11 首场</b></td><td class="num">11.02</td><td><span class="tag t-red">预热期 · 综合场</span></td><td>双 11 官宣、活动预告 / 全天循环轮播</td></tr>
+        <tr><td><b>重点省份专场 × 12 场</b></td><td class="num">11.03 – 11.10</td><td><span class="tag t-blue">预热期 · 省份场</span></td><td>本省投标干货内容分享；一省半天；以政策、平台、工具高频问题等投标人关注的干货为主（交付讲），串联双 11 主推产品与活动</td></tr>
+        <tr><td><b>活动期专场</b></td><td class="num">11.11 – 11.13</td><td><span class="tag t-red">活动期 · 抽奖+促单</span></td><td>直播间引导下单客户互动抽奖，吸引观望客户下单 / 三天循环轮播</td></tr>
+        <tr><td><b>区域分公司合作专场</b></td><td class="num">11.14 – 11.30</td><td><span class="tag t-gold">活动期 · 省份场</span></td><td>合作交易区域分公司 + 线上销服部门专场，以该区域范围内投标人关注的内容分享为主</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 4 -->
+<section id="s4">
+  <div class="s-head">
+    <div class="s-no">4</div>
+    <div>
+      <h2>作战时间轴：四个阶段</h2>
+      <p>从 10.08 前期准备到 12.07 收尾，四个阶段推进。</p>
+    </div>
+  </div>
+  <div class="tl">
+    <div class="tl-line"></div>
+    <div class="tl-days">
+      <div>10.08–11.01</div><div>11.02–11.10</div>
+      <div style="color:var(--red);font-weight:800;">11.11–11.30 ★</div><div>12.01–12.07</div>
+    </div>
+  </div>
+  <div class="tl-cards">
+    <div class="tl-c">
+      <h4>P1 前期准备</h4>
+      <div class="dt">10.08 – 11.01</div>
+      <ul>
+        <li>与分公司沟通区域营销政策</li>
+        <li>活动物料准备（海报、宣传图、直播物料）</li>
+        <li>建立沟通协调机制·确定接口人</li>
+        <li>活动前内部宣贯</li>
+        <li>区域套餐申报（10.28前）</li>
+        <li>营销中台商品上架（10.30前）</li>
+      </ul>
+    </div>
+    <div class="tl-c">
+      <h4>P2 预热阶段</h4>
+      <div class="dt">11.02 – 11.10</div>
+      <ul>
+        <li>自媒体投流（公众号/抖音/视频号）</li>
+        <li>注册有礼 · 转发有礼上线</li>
+        <li>自营产品宣传（e交易/标桥/标证通）</li>
+        <li>直播预热（首场 11.02 + 省份专场）</li>
+        <li>投标人公益讲座</li>
+        <li>呼入引流 · 短信引流</li>
+        <li><b>预热收口（11.10）</b>：企微 + 短信群发提醒，定向触达留资未下单用户</li>
+      </ul>
+    </div>
+    <div class="tl-c hot">
+      <h4>P3 活动阶段</h4>
+      <div class="dt">11.11 – 11.30</div>
+      <ul>
+        <li>直播引流（11.11–11.13 专题直播）</li>
+        <li>全国通用套餐（主打）· 好礼送不停</li>
+        <li>顺手买一件（满2000加购）</li>
+        <li>老带新礼遇</li>
+      </ul>
+    </div>
+    <div class="tl-c">
+      <h4>P4 收尾阶段</h4>
+      <div class="dt">12.01 – 12.07</div>
+      <ul>
+        <li>活动抽奖及奖品发放</li>
+        <li>售后处理</li>
+        <li>活动复盘和总结</li>
+        <li>用户留存，保持粘性</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid2" style="margin-top:14px;">
+    <div class="card">
+      <h3 class="ct">硬性时间卡点</h3>
+      <table>
+        <thead><tr><th class="num">时间</th><th>事项</th><th>负责</th></tr></thead>
+        <tbody>
+          <tr><td class="num">10.19 前</td><td>新点e交易宣传页面与详情页文案、标证通首页宣传、直播宣传材料</td><td>徐松</td></tr>
+          <tr><td class="num"><b>10.19 前</b></td><td><b>标桥首页 banner 页面制作</b>（第 ③ 项的自营资源位核心节点）</td><td>徐松</td></tr>
+          <tr><td class="num">10.25 前</td><td>公众号活动海报与文案、注册有礼/转发有礼海报</td><td>徐松</td></tr>
+          <tr><td class="num">10.28 前</td><td>提交《区域双 11 组合套餐方案》</td><td>分公司</td></tr>
+          <tr><td class="num">10.30 前</td><td>营销中台商品上架（全国通用套餐、顺手买一件、区域组合套餐）、下单开票培训</td><td>左腾</td></tr>
+          <tr><td class="num">11.02 前</td><td>抖音/微信视频号宣传视频、标桥 banner 更新上线、e交易资源位上线、标证通小程序首页、公众号宣传稿与视频发布</td><td>多部门</td></tr>
+          <tr><td class="num"><b>11.10 前</b></td><td><b>预热收口</b>：企微 + 短信群发提醒，定向触达注册有礼留资未下单用户</td><td>客服 + 分公司</td></tr>
+          <tr><td class="num">11.11 前</td><td>老带新权益发放开关开启</td><td>产品部 曹佩</td></tr>
+          <tr><td class="num">11.30 前</td><td>权益发放 T+1 全周期执行</td><td>产品部</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h3 class="ct">预热期与活动期的重心划分</h3>
+      <div class="kv">
+        <dt>预热期主任务</dt><dd>留资 + 装机 + 意向锁定</dd>
+        <dt>预热期核心动作</dt><dd>注册有礼（拉装机）、转发有礼（裂变）、省份专场直播（教育）、<b>预热收口 11.10（企微 + 短信锁定意向）</b></dd>
+        <dt>活动中期主任务</dt><dd>成单 + 连带 + 逼单</dd>
+        <dt>活动中期核心动作</dt><dd>好礼送不停（抽奖逼单）、顺手买一件（拉客单）</dd>
+        <dt>收尾期主任务</dt><dd>兑奖 + 售后 + 留存</dd>
+        <dt>收尾期核心动作</dt><dd>奖品发放、复盘、用户留存运营</dd>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section id="s5">
+  <div class="s-head">
+    <div class="s-no">5</div>
+    <div>
+      <h2>渠道矩阵与量化指标</h2>
+      <p>各渠道指标分解到人。</p>
+    </div>
+  </div>
+  <div class="card">
+    <table>
+      <thead><tr><th style="width:150px;">渠道</th><th style="width:110px;">承接指标</th><th>具体动作与话术要点</th><th style="width:120px;">负责</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><b>企微私信</b><br><span class="muted">客服团队</span></td>
+          <td><span class="tag t-red">不少于 30,000 条</span></td>
+          <td>活动期间企微私信推送活动通知；配合注册有礼与转发有礼话术；<b>11.10 预热收口：对留资未下单用户群发一次定向提醒</b></td>
+          <td>潘秀君 / 黄莺 / 徐蕾</td>
+        </tr>
+        <tr>
+          <td><b>短信 / 私信</b><br><span class="muted">分公司</span></td>
+          <td><span class="tag t-red">不少于 10,000 条</span></td>
+          <td>老客户短信 / 私信推送活动通知；<b>11.10 与企微同步执行预热收口群发</b></td>
+          <td>分公司</td>
+        </tr>
+        <tr>
+          <td><b>呼入引流</b></td>
+          <td><span class="tag t-gold">每日 ≥ 100 个</span></td>
+          <td>销售团队负责呼入用户的双十一活动介绍及引导</td>
+          <td>客服 + 分公司</td>
+        </tr>
+        <tr>
+          <td><b>电话通知</b><br><span class="muted">分公司</span></td>
+          <td><span class="tag t-gold">每日 ≥ 50 人</span></td>
+          <td>主动联系客户通知双十一活动</td>
+          <td>分公司</td>
+        </tr>
+        <tr>
+          <td><b>朋友圈转发</b></td>
+          <td><span class="tag t-blue">客服 ≥3 次<br>其他 ≥5 次</span></td>
+          <td>销售个人朋友圈发布活动海报；并推动客户转发（每人不低于 5 名客户转发）</td>
+          <td>客服 / 市场直销 / 分公司</td>
+        </tr>
+        <tr>
+          <td><b>抖音 / 微信视频号</b><br><span class="muted">新点投标人服务</span></td>
+          <td><span class="tag t-blue">完成宣传视频</span></td>
+          <td>视频制作 11.02 前完成；研究院负责平台发布；持续至 11.30</td>
+          <td>季春娟 / 马博林</td>
+        </tr>
+        <tr>
+          <td><b>公众号</b><br><span class="muted">新点投标人服务—标桥</span></td>
+          <td><span class="tag t-blue">完成材料与发布</span></td>
+          <td>活动海报与文案 10.25 前；研究院 11.02 前发布宣传稿</td>
+          <td>徐松 / 侯佳宇</td>
+        </tr>
+        <tr>
+          <td><b>新点 e 交易</b><br><span class="muted">自营平台</span></td>
+          <td><span class="tag t-red">全集曝光位</span></td>
+          <td>首页 banner、弹窗、飘窗、详情页；10.19 前制作、11.02 前上线</td>
+          <td>徐松 / 左腾</td>
+        </tr>
+        <tr>
+          <td><b>标桥</b><br><span class="muted">PC 工作台</span></td>
+          <td><span class="tag t-red">装机主阵地</span></td>
+          <td>首页 banner 宣传；10.19 前完成制作、11.02 前更新上线</td>
+          <td>徐松 / 曹佩</td>
+        </tr>
+        <tr>
+          <td><b>标证通</b><br><span class="muted">APP + 微信小程序</span></td>
+          <td><span class="tag t-red">双端曝光</span></td>
+          <td>APP 首页与小程序首页宣传；10.19 前制作、11.02 前上线</td>
+          <td>徐松 / 王晨阳</td>
+        </tr>
+        <tr>
+          <td><b>线下公益讲座</b><br><span class="muted">分公司</span></td>
+          <td><span class="tag t-red">每分公司 ≥2 场</span></td>
+          <td>10.26–11.30 申报并执行，现场宣传双十一并引导装机</td>
+          <td>分公司</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 6 -->
+<section id="s6">
+  <div class="s-head">
+    <div class="s-no">6</div>
+    <div>
+      <h2>预算：65,200 元怎么花</h2>
+      <p>活动总预算 65,200 元，主要费用由运营中心承担。</p>
+    </div>
+  </div>
+  <div class="grid2" style="align-items:start;">
+    <div class="card">
+      <h3 class="ct">预算明细</h3>
+      <table>
+        <thead><tr><th>费用类别</th><th>奖品内容</th><th class="num">单价</th><th class="num">数量</th><th class="num">合计</th></tr></thead>
+        <tbody>
+          <tr><td rowspan="2"><b>注册有礼</b></td><td>AI编标 5万字</td><td class="num">40</td><td class="num">预估 500</td><td class="num">20,000</td></tr>
+          <tr><td colspan="4" class="muted">按每份 40 元折算，500 份为预估值</td></tr>
+          <tr><td><b>转发有礼</b></td><td>AI编标 10万字</td><td class="num">70</td><td class="num">预估 300</td><td class="num">预估 21,000</td></tr>
+          <tr><td rowspan="5"><b>好礼送不停</b></td><td>京东消费券 / 产品抵扣券（一等奖）</td><td class="num">800</td><td class="num">1</td><td class="num">800</td></tr>
+          <tr><td>京东消费券 / 产品抵扣券（二等奖）</td><td class="num">500</td><td class="num">2</td><td class="num">1,000</td></tr>
+          <tr><td>京东消费券 / 产品抵扣券（三等奖）</td><td class="num">300</td><td class="num">5</td><td class="num">1,500</td></tr>
+          <tr><td>京东消费券 / 产品抵扣券（参与奖）</td><td class="num">50</td><td class="num">100</td><td class="num">5,000</td></tr>
+          <tr class="sub-row"><td colspan="4">小计 <b>8,300</b></td></tr>
+          <tr><td><b>老带新礼遇</b></td><td>AI编标 20万字</td><td class="num">159</td><td class="num">预估 100</td><td class="num">15,900</td></tr>
+          <tr class="total-row"><td colspan="4">总计 <span class="num">65,200</span> 元</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h3 class="ct">预算结构</h3>
+      <div class="bars">
+        <div class="bar-row"><div class="lb">转发有礼</div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><div class="vl">2.10 万</div></div>
+        <div class="bar-row"><div class="lb">注册有礼</div><div class="bar-track"><div class="bar-fill" style="width:95.2%"></div></div><div class="vl">2.00 万</div></div>
+        <div class="bar-row"><div class="lb">老带新礼遇</div><div class="bar-track"><div class="bar-fill" style="width:75.7%"></div></div><div class="vl">1.59 万</div></div>
+        <div class="bar-row"><div class="lb">好礼送不停</div><div class="bar-track"><div class="bar-fill" style="width:39.5%"></div></div><div class="vl">0.83 万</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section id="s7">
+  <div class="s-head">
+    <div class="s-no">7</div>
+    <div>
+      <h2>组织分工：六个执行单元</h2>
+      <p>六个执行单元，任务与量化指标已到人。</p>
+    </div>
+  </div>
+  <div class="card">
+    <table>
+      <thead><tr><th style="width:150px;">活动组织</th><th style="width:80px;">销售目标</th><th>核心职责</th><th style="width:150px;">关键量化指标</th><th style="width:110px;">负责人</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><b>零售销服部 - 客服</b></td><td class="num" style="color:var(--red);font-weight:800;">30 万</td>
+          <td>呼入引流、企微私信通知、直播邀约、转发推动、老带新</td>
+          <td>企微 ≥30,000 条<br>每日呼入 ≥100 个<br>老带新新增 30 个<br>朋友圈 ≥3 次</td>
+          <td>潘秀君<br>黄莺<br>徐蕾</td>
+        </tr>
+        <tr>
+          <td><b>零售销服部 - 市场和直销</b></td><td class="num">/</td>
+          <td>抖音与视频号内容制作、直播执行、转发推动</td>
+          <td>完成宣传视频<br>完成 2 场直播<br>朋友圈 ≥5 次</td>
+          <td>季春娟</td>
+        </tr>
+        <tr>
+          <td><b>分公司 - 零售销售团队</b></td><td class="num" style="color:var(--red);font-weight:800;">70 万</td>
+          <td>电话通知、短信私信、呼入引流、线下公益讲座、区域套餐申报、老带新</td>
+          <td>短信 ≥10,000 条<br>每日电话 ≥50 人<br>每日呼入 ≥100 个<br>老带新新增 70 个<br>每分公司 ≥2 场讲座</td>
+          <td>各分公司</td>
+        </tr>
+        <tr>
+          <td><b>运营中心</b></td><td class="num">/</td>
+          <td>物料与文案制作、自营产品资源位、营销中台上架、权益复核、下单开票培训</td>
+          <td>材料 10.25 前完成<br>资源位 10.19/11.02 前<br>上架 10.30 前<br>转发/老带新当日复核</td>
+          <td>徐松<br>左腾</td>
+        </tr>
+        <tr>
+          <td><b>产品部</b></td><td class="num">/</td>
+          <td>AI编标权益发放、标桥与标证通首页更新</td>
+          <td>权益发放最晚 <b>T+1</b><br>资源位 11.02 前完成</td>
+          <td>曹佩<br>王晨阳</td>
+        </tr>
+        <tr>
+          <td><b>智慧交易研究院</b></td><td class="num">/</td>
+          <td>公众号、抖音、微信视频号平台内容发布</td>
+          <td>11.02 前完成发布</td>
+          <td>侯佳宇<br>马博林</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 8 -->
+<section id="s8">
+  <div class="s-head">
+    <div class="s-no">8</div>
+    <div>
+      <h2>KPI 看板：结果 + 过程</h2>
+      <p>结果指标用于考核，过程指标用于日常跟踪。</p>
+    </div>
+  </div>
+  <div class="card">
+    <h3 class="ct">结果指标</h3>
+    <div class="kpi-grid">
+      <div class="kpi"><small>套餐销售金额</small><strong>100 万</strong><span>约 500 单 · 客单 2,000 元</span></div>
+      <div class="kpi"><small>业务增量</small><strong>30 万</strong><span>按 10–12 月同比计算</span></div>
+      <div class="kpi"><small>新客</small><strong>100 人</strong><span>销售金额 20 万</span></div>
+      <div class="kpi"><small>标桥工作台装机</small><strong>3 万</strong><span>环比 +30% · 总量提升 4%</span></div>
+    </div>
+  </div>
+  <div class="card">
+    <h3 class="ct">过程指标</h3>
+    <table>
+      <thead><tr><th style="width:100px;">环节</th><th>指标</th><th class="num">目标值</th><th>责任方</th></tr></thead>
+      <tbody>
+        <tr><td rowspan="4">触达</td><td>企微私信推送</td><td class="num">≥ 30,000 条</td><td>客服</td></tr>
+        <tr><td>短信 / 私信推送</td><td class="num">≥ 10,000 条</td><td>分公司</td></tr>
+        <tr><td>抖音 / 视频号宣传视频</td><td class="num">完成并发布</td><td>市场直销 / 研究院</td></tr>
+        <tr><td>线下公益讲座</td><td class="num">每分公司 ≥ 2 场</td><td>分公司</td></tr>
+        <tr><td rowspan="2">互动</td><td>每日呼入活动介绍</td><td class="num">≥ 100 个 / 日</td><td>客服 + 分公司</td></tr>
+        <tr><td>每日电话通知客户</td><td class="num">≥ 50 人 / 日</td><td>分公司</td></tr>
+        <tr><td rowspan="2">裂变</td><td>朋友圈发布次数</td><td class="num">客服 ≥3 次 / 其他 ≥5 次</td><td>全员</td></tr>
+        <tr><td>客户转发人数</td><td class="num">每人 ≥ 5 名客户</td><td>全员</td></tr>
+        <tr><td rowspan="2">转化</td><td>老带新新增用户</td><td class="num">100 个（30 + 70）</td><td>客服 + 分公司</td></tr>
+        <tr><td>直播场次</td><td class="num">≥ 2 场（市场直销）</td><td>季春娟</td></tr>
+        <tr><td>履约</td><td>AI编标权益发放时效</td><td class="num">T+1 达成率 100%</td><td>产品部</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 9 -->
+<section id="s9">
+  <div class="s-head">
+    <div class="s-no">9</div>
+    <div>
+      <h2>活动规则与注意事项</h2>
+      <p>以下规则为销售与客服的高频争议点，请全员宣贯到位。</p>
+    </div>
+  </div>
+  <div class="card">
+    <table>
+      <thead><tr><th style="width:50px;">#</th><th>规则</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td>面向客户的活动价格统一：经审批确认的活动价格，在双十一活动期间，所有销售人员均可按该价格向客户售卖。</td></tr>
+        <tr><td class="num">2</td><td>面向客户的抽奖活动统一：活动期间，归属分公司业绩的双十一销售订单，奖品及费用运营中心承担。</td></tr>
+        <tr><td class="num">3</td><td>双十一活动期间，仅销售参加双十一活动的产品套餐可参与「下单抽奖」，<b>不得与非活动的软件产品合并凑单</b>。</td></tr>
+        <tr><td class="num">4</td><td>所有优惠（直降、集赞、加购、红包、抽奖等）原则上可叠加，具体以各产品活动页展示为准。</td></tr>
+        <tr><td class="num">5</td><td><b>同一订单仅可参与一次加购</b>。</td></tr>
+        <tr><td class="num">6</td><td>活动期间，归属某分公司朋友圈点赞活动用户，涉及到的产品权益费用由运营中心承担。</td></tr>
+        <tr><td class="num">7</td><td><b>标证通由第三方提供并开票。</b></td></tr>
+        <tr><td class="num">8</td><td>本活动最终解释权归新点软件所有。</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="footer">
+  双十一投标人服务产品促销活动方案 · 分公司宣贯版<br>
+  <b>新点投标人服务 · 2026 双十一促销活动</b>
+</div>
+
+</div>
+</body>
+</html>
